@@ -1,0 +1,29 @@
+{
+  "name": "paganate",
+  "version": "0.0.0",
+  "description": "Pagination event emitter.",
+  "main": "index.js",
+  "scripts": {
+    "test": "tap test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/derekr/paganate"
+  },
+  "keywords": [
+    "paginate",
+    "pagination",
+    "page",
+    "paging",
+    "slice"
+  ],
+  "author": "Derek Reynolds <drk@diy.org>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/derekr/paganate/issues"
+  },
+  "homepage": "https://github.com/derekr/paganate",
+  "devDependencies": {
+    "tap": "^0.4.8"
+  }
+}
