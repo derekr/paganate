@@ -1,6 +1,6 @@
 {
   "name": "paganate",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Pagination event emitter.",
   "main": "index.js",
   "scripts": {
