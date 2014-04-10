@@ -49,3 +49,7 @@ Will not decrement past 0.
 ## p.on('page', page, offset)
 
 Emitted whenever `next` or `prev` are called.
+
+# License
+
+MIT
