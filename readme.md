@@ -1,3 +1,5 @@
+![](https://raw.githubusercontent.com/derekr/paganate/master/paganate.png)
+
 # paganate
 #### Pagination event emitter.
 
@@ -53,3 +55,8 @@ Emitted whenever `next` or `prev` are called.
 # License
 
 MIT
+
+# Note
+
+Not sure where the pizza pentagram img comes from, but if you
+know I'd like to credit them!
