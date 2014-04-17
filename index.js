@@ -53,6 +53,7 @@ Paganate.prototype.next = function () {
     }
 
     this.curr = cap(this.curr + 1);
+
     this.emit('page', this.curr, this.offset());
 }
 
@@ -60,8 +61,20 @@ Paganate.prototype.prev = function () {
     if (this._first) this.next();
 
     this.curr = cap(this.curr - 1);
+
     this.emit('page', this.curr, this.offset());
 }
+
+Paganate.prototype.page = function (pg) {
+    if (this.pageCount > 0 && pg > this.pageCount) {
+        throw new Error('Page out of range');
+    }
+
+    this._first = false;
+
+    this.curr = cap(pg);
+    this.emit('page', this.curr, this.offset());
+};
 
 Paganate.prototype.offset = function () {
     return this.limit * this.curr;

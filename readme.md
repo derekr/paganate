@@ -46,6 +46,28 @@ Will increment the current page and emit a `page` event.
 Will decrement the current page and emit a `page` event.
 Will not decrement past 0.
 
+## p.page(pg)
+
+Will jump to the provided page. If `total` is provided in the options then
+this will throw an error if the page is larger than the calculated pages.
+
+```
+var p = paganate({ limit: 15, total: 30 });
+
+p.page(2); // last page
+p.page(3): // throws error
+```
+
+## p.pageCount
+
+If `total` is provided in the options then this will be a the number of
+calculated pages.
+
+## p.pageRange
+
+If `total` is provided in the options then this will be an array of all
+page numbers. Convenient for rendering a list of pages for ui pagination.
+
 # Events
 
 ## p.on('page', page, offset)
