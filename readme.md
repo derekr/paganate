@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/derekr/paganate.svg?branch=master)](https://travis-ci.org/derekr/paganate)
+
 ![](https://raw.githubusercontent.com/derekr/paganate/master/paganate.png)
 
 # paganate
