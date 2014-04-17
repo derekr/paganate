@@ -46,35 +46,28 @@ function Paganate (options) {
 
 inherits(Paganate, Emitter);
 
-Paganate.prototype.next = function () {
-    if (this._first) {
-        this.curr = -1; // trick in to triggering page at 0
-        this._first = false;
-    }
-
-    this.curr = cap(this.curr + 1);
-
-    this.emit('page', this.curr, this.offset());
-}
-
-Paganate.prototype.prev = function () {
-    if (this._first) this.next();
-
-    this.curr = cap(this.curr - 1);
-
-    this.emit('page', this.curr, this.offset());
-}
-
 Paganate.prototype.page = function (pg) {
     if (this.pageCount > 0 && pg > this.pageCount) {
         throw new Error('Page out of range');
     }
 
-    this._first = false;
+    if (this._first) this._first = false;
 
     this.curr = cap(pg);
     this.emit('page', this.curr, this.offset());
 };
+
+Paganate.prototype.next = function () {
+    if (this._first) {
+        this.curr = -1; // trick in to triggering page at 0
+    }
+
+    this.page(this.curr + 1);
+}
+
+Paganate.prototype.prev = function () {
+    this.page(this.curr - 1);
+}
 
 Paganate.prototype.offset = function () {
     return this.limit * this.curr;
