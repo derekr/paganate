@@ -8,6 +8,8 @@
 EventEmitter for pagination data. Only handle pagination logic and leaves
 what to do on paging to the caller.
 
+Testing
+
 # Installation
 
 ```
